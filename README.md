@@ -1,6 +1,6 @@
 # HL7-dotnetcore
 
-[![github](https://img.shields.io/github/stars/ChuLyon/HL7-dotnetcore.svg)]()
+[![.NET](https://github.com/ChuLyon/HL7-dotnetcore/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ChuLyon/HL7-dotnetcore/actions/workflows/dotnet.yml)
 
 This is a lightweight library for building and parsing HL7 2.x messages, for .Net Standard and .Net Core. It is not tied to any particular version of HL7 nor validates against one. 
 
