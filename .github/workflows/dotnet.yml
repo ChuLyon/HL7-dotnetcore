@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v3.0.0
       with:
         name: HL7-HCL-dotnetcore
-        path: ~/**/*.nupkg
+        path: ~/**/HL7-dotnetcore*.nupkg
