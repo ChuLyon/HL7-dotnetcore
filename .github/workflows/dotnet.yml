@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
     - name: Package
-      run: dotnet pack ~/src/HL7-dotnetcore.csproj --configuration Release
+      run: dotnet pack --no-build --configuration Release
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
       with:
