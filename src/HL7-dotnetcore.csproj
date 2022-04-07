@@ -5,7 +5,7 @@
     <VersionPrefix>2.29.0</VersionPrefix>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>HL7-HCL-dotnetcore</AssemblyName>
-    <PackageId>HL7-dotnetcore</PackageId>
+    <PackageId>HL7-HCL-dotnetcore</PackageId>
     <PackageTags>hl7;dotnetcore</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/ChuLyon/HL7-dotnetcore</RepositoryUrl>
