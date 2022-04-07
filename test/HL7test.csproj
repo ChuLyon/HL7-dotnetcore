@@ -8,6 +8,7 @@
     <PackageId>HL7Test</PackageId>
     <OutputType>exe</OutputType>
     <StartupObject>HL7.Dotnetcore.Test.HL7Test</StartupObject>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
