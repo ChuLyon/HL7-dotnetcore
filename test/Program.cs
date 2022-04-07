@@ -16,7 +16,7 @@ namespace HL7.Dotnetcore.Test
         {
             var test = new HL7Test();
             // test.CustomDelimiter();
-            test.AddRepeatingField();
+            test.AddSubComponent();
         }
 
         public HL7Test()
@@ -627,6 +627,29 @@ PV1||A|00004620^00001318^1318||||000123456^Superfrau^Maria W.^|^Superarzt^Anton^
         }
 
         [TestMethod]
+        public void AddSubComponent()
+        {
+            var enc = new HL7Encoding();
+            Segment PID = new Segment("PID", enc);
+            Field f = new Field(enc);
+            Component c = new Component(enc);
+            c.IsSubComponentized = true;
+            SubComponent sc1 = new SubComponent("A",enc);
+            SubComponent sc2 = new SubComponent("B", enc);
+            c.AddSubComponent(sc1);
+            c.AddSubComponent(sc2);
+            f.AddNewComponent(c);
+
+            // Creates a new Field
+            PID.AddNewField(f, 1);
+
+            Message message = new Message();
+            message.AddNewSegment(PID);
+            var str = message.SerializeMessage(false);
+
+            Assert.AreEqual("PID|A&B\r", str);
+        }
+          
         public void BypassValidationParseMessage()
         {
             string sampleMessage = @"MSH|^~\&|SCA|SCA|LIS|LIS|202107300000||ORU^R01||P|2.4|||||||
