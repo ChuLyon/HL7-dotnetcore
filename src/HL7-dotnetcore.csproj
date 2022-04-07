@@ -9,6 +9,7 @@
     <PackageTags>hl7;dotnetcore</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/ChuLyon/HL7-dotnetcore</RepositoryUrl>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
